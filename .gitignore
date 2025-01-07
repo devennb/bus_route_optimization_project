@@ -1,2 +1,6 @@
 /configs
 /simulations
+*/.ipynb_checkpoints
+*/cache 
+*.db
+*.sh 
