@@ -188,7 +188,7 @@ class SequentialRouteOptimization(ParallelRouteOptimation):
         '''
         Plot the route scheme via osmnx functionality after optimization
         '''
-        
+
         G = get_osmnx_graph()
         routes = [
             obtain_veh_route(
@@ -216,7 +216,7 @@ class SequentialRouteOptimization(ParallelRouteOptimation):
 
         assigned_nodes = list(self.results['Minimized Costs/Times']['index'].astype(int))
         nodes, _ = ox.graph_to_gdfs(G, nodes=True)
-        print(assigned_nodes)
+     
         assigned_nodes_df = nodes.loc[assigned_nodes]
         coverage_radius = self.coverage_radius / 100000
         for _, r in assigned_nodes_df.iterrows():
@@ -230,8 +230,3 @@ class SequentialRouteOptimization(ParallelRouteOptimation):
         plt.show()
     
     
-
-
-
-        
-        
