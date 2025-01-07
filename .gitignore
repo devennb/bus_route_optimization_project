@@ -1,6 +1,9 @@
 /configs
 /simulations
-*/.ipynb_checkpoints
-*/cache 
+/optimization/.ipynb_checkpoints
+/optimization/cache 
+/optimization/__pycache__
+/data_playground/.ipynb_checkpoints
+/data_playground/cache
 *.db
 *.sh 
