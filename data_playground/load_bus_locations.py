@@ -6,7 +6,7 @@ import schedule
 import os 
 import time
 
-mta_bustime_api_key = '3d20bad4-8923-4fce-9046-199dccde6e95'
+mta_bustime_api_key = os.environ['BUSTIME_KEY']
 get_movements = f'https://bustime.mta.info/api/siri/vehicle-monitoring.json?key={mta_bustime_api_key}'
 
 def load_bus_locations(line, tbl_name, db_name):
@@ -119,7 +119,6 @@ def load_bus_locations(line, tbl_name, db_name):
     )
     conn.close()
     
-
     return active_only
 
 if __name__ == '__main__':
